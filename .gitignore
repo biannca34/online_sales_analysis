@@ -1,0 +1,9 @@
+# Ignore config.json
+config.json
+
+# Ignore screenshots
+*.png
+*.jpg
+*.jpeg
+*.bmp
+*.gif
