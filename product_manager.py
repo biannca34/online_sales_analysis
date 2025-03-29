@@ -8,6 +8,14 @@ class ProductManager:
         self.products.append(product)
         print(f"Produsul {product.name} a fost adaugat cu succes.")
 
+    def remove_product(self, product_name):
+        for product in self.products:
+            if product.name == product_name:
+                self.products.remove(product)
+                print(f"Produsul {product_name} a fost eliminat cu succes.")
+                return
+        print(f"Produsul {product_name} nu exista in lista.")
+
     def display_all_products(self):
         if not self.products:
             print("Nu exista produse disponibile.")
@@ -21,5 +29,5 @@ class ProductManager:
         total_value = sum(product.price * product.quantity for product in self.products)
         print(f"Valoarea totala a tuturor produselor: {total_value} RON")
         return total_value
-    
+
 manager = ProductManager()

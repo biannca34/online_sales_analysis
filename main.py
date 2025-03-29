@@ -1,6 +1,6 @@
 from product import Product
 from product_manager import ProductManager
-
+from cart import Cart
 
 manager = ProductManager()
 
@@ -13,7 +13,12 @@ manager.add_product(product1)
 manager.add_product(product2)
 manager.add_product(product3)
 
-# Display all products
-manager.display_all_products()
+manager.remove_product("Telefon")
 
-manager.calculate_total_value()
+cart = Cart()
+
+cart.add_to_cart(product1, 2)
+cart.add_to_cart(product3, 3)
+
+cart.display_cart()
+print(f"Valoarea totala de plata: {cart.calculate_total()} RON")
