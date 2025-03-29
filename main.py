@@ -13,7 +13,13 @@ manager.add_product(product1)
 manager.add_product(product2)
 manager.add_product(product3)
 
-# Display all products
+
 manager.display_all_products()
 
 manager.calculate_total_value()
+
+manager.remove_product("Telefon")
+
+manager.display_all_products()
+
+manager.remove_product("Televizor")
